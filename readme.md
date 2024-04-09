@@ -5,11 +5,13 @@ To run tests:
 4. Click Play button in IDE
 
 Test descriptions
+
 1. test_author_linecount
 Test search by author and linecount (positive)
 
 Steps:
 - Request data by author and number of lines for few combinations (positive)
+- 
 Expected result: 
 - Response code is 200 - to validate that request works fine
 - Each request returns in response exact amount of poems in database - to validate that return
@@ -19,18 +21,22 @@ actual line numbers calculated in the test with numbers from DB
 
 2. test_author_not_exist 
 Test search return no result
+
 Steps:
 - Request data by author using string which is not in any of author's name (e.g. Abcefg)
+  
 Expected result:
 - Response code is 200 - to validate that request works fine
 - Return value is {"status":404,"reason":"Not found"} - to validate return text
 
 3. test_search_by_partial_name
 Test ssearch by partial author's name
+
 Steps:
 - Request data by author using one uppercase letter
 - Request data by author using combination of uppercase and lowercase letter
 - Request data by author using three uppercase letters
+  
 Expected result:
 - Response code is 200 - to validate that request works fine
 - Verify that search string is in each returned poem's author name (regardless of case) - check that
