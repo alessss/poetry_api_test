@@ -7,6 +7,7 @@ To run tests:
 Test descriptions
 1. test_author_linecount
 Test search by author and linecount (positive)
+
 Steps:
 - Request data by author and number of lines for few combinations (positive)
 Expected result: 
